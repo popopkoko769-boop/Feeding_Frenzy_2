@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feeding Frenzy 2 - Arcade Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay" id="menu">
+      <h1>Feeding Frenzy 2</h1>
+      <p>Eat smaller fish, avoid bigger ones, collect power-ups!</p>
+      <button id="startButton">Start Game</button>
+      <div class="controls">
+        <h2>Controls</h2>
+        <ul>
+          <li>Move with Mouse or WASD / Arrow Keys</li>
+          <li>Eat smaller fish to grow</li>
+          <li>Collect power-ups for buffs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="gameOver">
+      <h1>Game Over</h1>
+      <p id="finalScore">Score: 0</p>
+      <button id="restartButton">Play Again</button>
+    </div>
+
+    <div class="hud">
+      <div class="growth">
+        <span>Growth</span>
+        <div class="growth-bar">
+          <div class="growth-fill" id="growthFill"></div>
+        </div>
+      </div>
+      <div class="stats">
+        <span id="score">Score: 0</span>
+        <span id="lives">Lives: 3</span>
+      </div>
+      <div class="powerups" id="powerups"></div>
+    </div>
+
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+    <script src="game.js"></script>
+  </body>
+</html>
